@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathWeb - Matteark for barn</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script type="module" src="js/script.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>MathWeb 0.1</h1>
+      <p>Generer matteark med stigende vanskelighetsgrad, figurer og fasit.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="panel controls" aria-label="Innstillinger">
+      <h2>Velg innstillinger</h2>
+      <div class="grid">
+        <label>
+          Alder
+          <select id="ageSelect">
+            <option value="10">10 år</option>
+            <option value="11">11 år</option>
+            <option value="12">12 år</option>
+          </select>
+        </label>
+
+        <label>
+          Antall matteark
+          <input id="sheetCountInput" type="number" min="1" max="8" value="1">
+        </label>
+
+        <label>
+          Vanskelighetsgrad
+          <select id="difficultySelect">
+            <option value="lett">Lett</option>
+            <option value="middels">Middels</option>
+            <option value="vanskelig">Vanskelig</option>
+            <option value="blandet">Blandet</option>
+          </select>
+        </label>
+
+        <label class="checkbox-row">
+          <input id="showFiguresCheckbox" type="checkbox" checked>
+          Vis figurer (SVG)
+        </label>
+      </div>
+
+      <div class="button-row">
+        <button id="generateBtn" type="button">Generer oppgaver</button>
+        <button id="toggleAnswersBtn" type="button" disabled>Vis fasit</button>
+        <button id="printBtn" type="button" disabled>Skriv ut</button>
+      </div>
+    </section>
+
+    <section id="sheetsContainer" class="sheets" aria-live="polite"></section>
+  </main>
+</body>
+</html>
