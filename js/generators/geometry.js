@@ -5,6 +5,7 @@ import { difficultyFactor, normalizeDifficulty } from "../utils/math.js";
 import { toFixedClean } from "../utils/formatting.js";
 import { makeRectangleSvg } from "../figures/rectangle.js";
 import { makeTriangleSvg } from "../figures/triangle.js";
+import { makeCircleSvg } from "../figures/circle.js";
 
 export function generateGeometryProblem(age, selectedDifficulty, indexInSection) {
   const profile = getAgeProfile(age);
@@ -61,13 +62,14 @@ export function generateGeometryProblem(age, selectedDifficulty, indexInSection)
     };
   }
 
-  const angleA = randomInt(20, 80);
-  const angleB = randomInt(20, 80);
-  const angleC = 180 - angleA - angleB;
+  const radius = randomInt(3, base);
+  const area = toFixedClean(3.14 * radius * radius);
+  const circumference = toFixedClean(2 * 3.14 * radius);
   return {
-    key: `geo-angles-${angleA}-${angleB}`,
-    prompt: `I en trekant er to vinkler $${angleA}^\\circ$ og $${angleB}^\\circ$. Finn den siste vinkelen.`,
-    answer: `${angleC}°`,
+    key: `geo-circle-${radius}`,
+    prompt: `En sirkel har radius $${radius}$. Finn areal og omkrets (bruk $\\pi \\approx 3{,}14$).`,
+    answer: `A = ${area}, O = ${circumference}`,
+    figure: makeCircleSvg(radius * 8, "Sirkel"),
     hard: difficulty === Difficulty.VANSKELIG
   };
 }
