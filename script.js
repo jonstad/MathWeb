@@ -8,11 +8,11 @@ const printBtn = document.getElementById("printBtn");
 const sheetsContainer = document.getElementById("sheetsContainer");
 
 const SECTION_DEFS = [
-  { id: "A", title: "Addisjon og subtraksjon", key: "addSub" },
-  { id: "B", title: "Multiplikasjon og divisjon", key: "mulDiv" },
-  { id: "C", title: "Brøk og prosent", key: "fractionPercent" },
-  { id: "D", title: "Geometri", key: "geometry" },
-  { id: "E", title: "Tekstoppgaver", key: "word" },
+  { id: "A", title: "Tekstoppgaver", key: "word" },
+  { id: "B", title: "Addisjon og subtraksjon", key: "addSub" },
+  { id: "C", title: "Multiplikasjon og divisjon", key: "mulDiv" },
+  { id: "D", title: "Brøk og prosent", key: "fractionPercent" },
+  { id: "E", title: "Geometri", key: "geometry" },
   { id: "F", title: "Trigonometri", key: "trigonometry" }
 ];
 
