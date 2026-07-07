@@ -1,11 +1,11 @@
-Refaktorer prosjektet og del opp script.js i flere ES6-moduler uten å endre eksisterende funksjonalitet.
+Refaktorer prosjektet og del opp js/script.js i flere ES6-moduler uten å endre eksisterende funksjonalitet.
 
 Mål:
 - Gjør koden enklere å vedlikeholde.
 - Gjør det enkelt å legge til nye oppgavetyper senere.
 - Behold all eksisterende funksjonalitet.
 - Bruk ES Modules (import/export).
-- Oppdater index.html slik at script.js lastes som module.
+- Oppdater index.html slik at js/script.js lastes som module.
 
 Ønsket mappestruktur:
 
@@ -99,8 +99,8 @@ Flytt:
 
 til rendering-moduler.
 
-7. script.js
-Script.js skal etter refaktorering hovedsakelig inneholde:
+7. js/script.js
+js/script.js skal etter refaktorering hovedsakelig inneholde:
 
 - DOM-element referanser
 - global state (answersVisible)

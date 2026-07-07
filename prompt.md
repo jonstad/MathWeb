@@ -3,11 +3,12 @@ Du er en ekspert webutvikler og pedagogisk matematikklærer.
 Lag en komplett nettside som genererer matteoppgaver for barn.
 
 STRUKTUR:
-Løsningen skal bestå av TRE filer:
+Løsningen skal bestå av:
 
 1. index.html
 2. styles.css
-3. script.js
+3. js/script.js (entrypoint)
+4. støttemoduler under js/
 
 Alle filene skal være komplette, ryddige og klare til bruk.
 
@@ -100,7 +101,7 @@ styles.css:
 - Barnevennlig fargevalg
 - Print-stiler
 
-script.js:
+js/script.js:
 - Generering av oppgaver
 - Generering av fasit
 - Random tall
@@ -124,7 +125,9 @@ Returner KUN:
 
 1. index.html
 2. styles.css
-3. script.js
+3. js/script.js
+
+Ved modulstruktur: inkluder nødvendige filer under js/.
 
 Alle fullstendige og klare til bruk.
 
