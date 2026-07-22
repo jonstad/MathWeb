@@ -171,6 +171,12 @@ button:disabled {
   padding-left: 1.3rem;
 }
 
+.problem-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
 .problem-item {
   margin: 0.45rem 0;
   padding: 0.45rem;
@@ -221,6 +227,10 @@ body.hide-figures .figure {
 
   .button-row {
     display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .problem-columns {
     grid-template-columns: 1fr;
   }
 }
